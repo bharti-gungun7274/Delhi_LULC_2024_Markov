@@ -1,0 +1,22 @@
+DELHI LULC 2024 CLASS CODEBOOK
+
+Raster: Delhi_LULC_2024_FINAL_NODATA.tif
+Resolution: 10 m
+CRS: EPSG:32643
+
+CLASS VALUES:
+
+0 = Water
+1 = Trees
+2 = Grass
+3 = Flooded vegetation
+4 = Crops
+5 = Shrub & scrub
+6 = Built-up
+7 = Bare ground
+8 = Snow & ice
+255 = NoData / outside study area
+
+IMPORTANT:
+Values 0–8 are LULC classes.
+255 is NoData and should not be treated as a LULC class.

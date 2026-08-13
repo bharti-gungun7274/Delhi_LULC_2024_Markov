@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Large raster
+*.tif
+*.tiff
+
+# QGIS temporary files
+*.qgs~
+*.qgz~
+
+# Windows
+Thumbs.db
