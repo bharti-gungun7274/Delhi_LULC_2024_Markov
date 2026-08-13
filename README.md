@@ -179,6 +179,37 @@ The `06_MARKOV` directory will contain:
 Markov analysis will require additional historical LULC maps, such as 2018 or another earlier reference year.
 
 ---
+## Final 2024 LULC GeoTIFF
+
+The final Delhi 2024 LULC raster generated using the Dynamic World workflow and subsequently processed in QGIS is available for download below.
+
+**[Download Delhi 2024 LULC GeoTIFF](https://drive.google.com/file/d/1evmkLu-Mr0bKdBNxpzhsGhmdc5D_h0KE/view?usp=sharing)**
+
+### Raster Specifications
+
+- **Year:** 2024
+- **Study Area:** Delhi
+- **Source:** Google Dynamic World
+- **Spatial Resolution:** 10 m × 10 m
+- **CRS:** EPSG:32643 — WGS 84 / UTM Zone 43N
+- **Format:** GeoTIFF
+- **Data Type:** Byte (8-bit unsigned integer)
+- **Number of Bands:** 1
+- **Valid LULC Classes:** 0–8
+- **NoData Value:** 255
+
+### NoData Handling
+
+The Dynamic World classes range from 0 to 8. During QGIS processing, pixels outside the Delhi study-area boundary were assigned the value **255** and 255 was explicitly defined as the **NoData value**.
+
+Therefore:
+
+- `0–8` → valid Dynamic World LULC classes
+- `255` → NoData / outside the study area
+
+This prevents pixels outside the Delhi boundary from being included as an actual LULC class during area statistics, validation, and subsequent Markov Chain analysis.
+
+> **Note:** The GeoTIFF is hosted externally on Google Drive because of its large file size and is therefore excluded from GitHub using `.gitignore`.
 
 ## Repository Structure
 
